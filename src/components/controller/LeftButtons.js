@@ -11,6 +11,12 @@ class LeftButtons extends HTMLElement {
       :host{
       }
 
+      button {
+        all: unset;
+        display: inline-block;
+        cursor: pointer;
+      }
+
       .container{
         width: 100%;
         height: 100%;
@@ -30,6 +36,7 @@ class LeftButtons extends HTMLElement {
         align-items: center;
         text-align: center;
         color: gray;
+        cursor: pointer;
       }
 
       .top-button,
@@ -72,6 +79,7 @@ class LeftButtons extends HTMLElement {
       }
       
       .left-button{
+        width: 100%;
         grid-row: 2;
         grid-column: 1;
         border-width: 2px 0 2px 2px;
@@ -96,7 +104,59 @@ class LeftButtons extends HTMLElement {
         background-color: black;
         border-radius: 50%;
         border: 2px groove gray;
-        box-shadow: -2px -1px 5px white inset;
+        box-shadow: -2px -1px 4px white inset,
+          2px 1px 7px black inset;
+      }
+
+      .top-button-movement{
+        width: 88%;
+        border-width: 3px 2px 0 2px;
+        border-style: groove;
+        border-color: gray;
+        border-radius: 2px;
+      }
+
+      .top-button-movement:active{
+        border-color: black;
+      }
+      
+      .right-button-movement{
+        width: 100%;
+        height: 90%;
+        border-width: 3px 2px 2px 0;
+        border-style: groove;
+        border-color: gray;
+        border-radius: 2px;
+      }
+
+      .right-button-movement:active{
+        border-color: black;
+      }
+      
+      .bottom-button-movement{
+        width: 100%;
+        height: 90%;
+        border-width: 0 2px 2px 2px;
+        border-style: groove;
+        border-color: gray;
+        border-radius: 2px;
+      }
+
+      .bottom-button-movement:active{
+        border-color: black;
+      }
+
+      .left-button-movement{
+        margin-inline-start: 1px;
+        width: 105%;
+        border-width: 3px 0 2px 2px;
+        border-style: groove;
+        border-color: gray;
+        border-radius: 2px;
+      }
+
+      .left-button-movement:active{
+        border-color: black;
       }
     `
   }
@@ -111,13 +171,21 @@ class LeftButtons extends HTMLElement {
     <style>${LeftButtons.styles}</style>
     <div class="container">
       <div class="buttons">
-        <div class="top-button">🡅</div>
-        <div class="right-button">🡆</div>
+        <div class="top-button">
+          <button class="top-button-movement">🡅</button>
+        </div>
+        <div class="right-button">
+          <button class="right-button-movement">🡆</button>
+        </div>
         <div class="center-button">
           <div class="center-circle"></div>
         </div>
-        <div class="bottom-button">🡇</div>
-        <div class="left-button">🡄</div>
+        <div class="bottom-button">
+          <button class="bottom-button-movement">🡇</button>
+        </div>
+        <div class="left-button">
+          <button class="left-button-movement">🡄</button>
+        </div>
       </div>
     </div>
     `

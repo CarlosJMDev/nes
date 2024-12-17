@@ -1,1 +1,1 @@
-import './components/NESController'
+import './components/controller/NESController'

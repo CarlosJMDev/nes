@@ -65,6 +65,7 @@ class RightButtons extends HTMLElement {
           background-color: var(--button-color);
           box-shadow:
           inset 1px 2px 2px #1E0606;
+          cursor: pointer;
         }
 
         .button::before {

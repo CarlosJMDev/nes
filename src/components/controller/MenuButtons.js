@@ -68,6 +68,7 @@ class MenuButtons extends HTMLElement {
           0 2px 0 1px #575757,
           0 0 8px #575757 inset,
           4px 0 6px #575757 inset;
+          cursor: pointer;
       }
 
       .text-decoration{

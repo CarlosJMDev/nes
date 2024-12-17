@@ -15,3 +15,9 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+/* button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+} */
