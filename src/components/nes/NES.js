@@ -1,6 +1,7 @@
 import './ControlPanel';
 import './PortPanel';
 import './CartridgeDoor';
+import './TopConsole';
 
 class NES extends HTMLElement {
   constructor(){
@@ -19,6 +20,8 @@ class NES extends HTMLElement {
         // --height: 336px;
         --width: 484px;
         --height: 168px;
+        --top-height: 234px;
+        --total-height: 402px;
 
         position: relative;
       }
@@ -31,11 +34,7 @@ class NES extends HTMLElement {
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-
-      .top{
-        position: absolute;
-        top: -1
+        position: relative;
       }
 
       .top-front,
@@ -48,6 +47,7 @@ class NES extends HTMLElement {
         background-color: var(--white-color);
         position: relative;
         z-index: 2;
+        border-top: 1px solid #eee;
       }
 
       .bottom-front{
@@ -59,13 +59,15 @@ class NES extends HTMLElement {
 
       .cable-hole{
         width: calc( var(--width) * 0.2);
-        height: var(--height);
+        height: 99.5%;
         background-color: var(--black-color);
         z-index: 10;
         position: absolute;
         right: 12%;
         bottom: 0;
         border: 1px solid black;
+        border-width: 0 1px 1px 1px;
+        border-top: 1px solid #333;
       }
 
       .control-panel{
@@ -96,7 +98,7 @@ class NES extends HTMLElement {
     this.shadowRoot.innerHTML = /* html */`
     <style>${NES.styles}</style>
     <article class="container">
-      <div class="top"></div>
+      <top-console></top-console>
       <div class="top-front">
         <div class="cartridge-door">
           <cartridge-door></cartridge-door>

@@ -45,10 +45,16 @@ class CartridgeDoor extends HTMLElement {
         position: absolute;
         bottom: -3%;
         left: 40%;
-        // border: 1px solid black;
         border-radius: 40%;
         background-color: var(--white-color);
         box-shadow: 0 0 1px black;
+      }
+
+      .registred-symbol {
+        position: absolute;
+        font-size: 2.5rem;
+        color: red;
+        font-weight: bold;
       }
     `
   }
@@ -62,7 +68,7 @@ class CartridgeDoor extends HTMLElement {
     <style>${CartridgeDoor.styles}</style>
     <article class="container">
       <div class="text">
-        <p class="title">Nintendo<span class="r-symbol">&#174;</span></p>
+        <p class="title">Nintendo<span class="registred-symbol">&#174;</span></p>
         <p class="subtitle">ENTERTAINMENT SYSTEM<span class="tm">TM</span></p>
         </div>
       <div class="grip-tab"></div>
