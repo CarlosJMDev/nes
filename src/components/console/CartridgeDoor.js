@@ -52,7 +52,7 @@ class CartridgeDoor extends HTMLElement {
 
       .registred-symbol {
         position: absolute;
-        font-size: 2.5rem;
+        font-size: 1rem;
         color: red;
         font-weight: bold;
       }
