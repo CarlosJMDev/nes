@@ -10,14 +10,8 @@ body{
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(10, 10, 10);
+  background-color: #3c3435;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* button {
-  all: unset;
-  display: inline-block;
-  cursor: pointer;
-} */

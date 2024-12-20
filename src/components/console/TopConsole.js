@@ -47,6 +47,7 @@ class TopConsole extends HTMLElement {
         position: absolute;
         bottom: 0;
         border: 1px solid black;
+        border-inline-end: 0;
       }
 
       .lines {

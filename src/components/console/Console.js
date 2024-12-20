@@ -12,7 +12,7 @@ class NESConsole extends HTMLElement {
   static get styles(){
     return /* css */`
       :host {
-        --white-color: #fff;
+        --white-color: #cdccd2;
         --black-color: #202020;
         --gray-color: #555;
 
