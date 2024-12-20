@@ -1,1 +1,1 @@
-@font-face{font-family:Pretendo;src:url(/fonts/pretendo.woff2) format("woff2"),url(/fonts/pretendo.woff) format("woff"),url(/fonts/pretendo.ttf) format("truetype")}body{margin:0;width:100vw;height:100vh;background-color:#3c3435;display:flex;justify-content:center;align-items:center}
+@font-face{font-family:Pretendo;src:url(./fonts/pretendo.woff2) format("woff2"),url(./fonts/pretendo.woff) format("woff"),url(./fonts/pretendo.ttf) format("truetype")}body{margin:0;width:100vw;height:100vh;background-color:#3c3435;display:flex;justify-content:center;align-items:center}
