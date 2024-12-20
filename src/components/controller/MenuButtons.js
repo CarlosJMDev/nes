@@ -1,5 +1,3 @@
-
-
 class MenuButtons extends HTMLElement {
   constructor(){
     super();
@@ -9,6 +7,10 @@ class MenuButtons extends HTMLElement {
   static get styles(){
     return /* css */`
       :host {
+        --line-decoration-height: 15.64px;
+        --button-width: 28.6px;
+        --button-height: 5px;
+        --line-menu-height: 37px;
       }
 
       .menu-container {
@@ -16,12 +18,12 @@ class MenuButtons extends HTMLElement {
         height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
       }
     
       .line-decoration{
         background-color: var(--center-decoration-color);
-        height: 24px;
+        height: var(--line-decoration-height);
         width: 100%;
         border-radius: 5px;
         border: 1px solid var(--center-decoration-color);
@@ -32,12 +34,12 @@ class MenuButtons extends HTMLElement {
         
         &:last-child{
           border-radius: 10px 10px 0 0;
-          height: 14px;
+          height: 15px;
         }
       }
 
       .line-menu{
-        height: 55px;
+        height: var(--line-menu-height);
         width: 100%;
         background-color: var(--central-button-background);
         border-radius: 5px;
@@ -60,8 +62,8 @@ class MenuButtons extends HTMLElement {
       }
 
       .button{
-        height: 15px;
-        width: 43px;
+        height: var(--button-height);
+        width: var(--button-wodth);
         border-radius: 35%;
         background-color: var(--movement-button-color);
         box-shadow:
@@ -82,7 +84,9 @@ class MenuButtons extends HTMLElement {
 
       .text-menu{
         font-family: "Pretendo";
-        font-size: .8rem;
+        font-weight: bold;
+        font-size: .5rem;
+        margin-block-start: 8%;
       }
     `
   }

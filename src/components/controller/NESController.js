@@ -19,9 +19,13 @@ class NESController extends HTMLElement {
         --center-decoration-color: #a3a49d;
         --central-button-background: #B2B2B2;
 
-        --width: 568px;
-        --height: 243px;
-
+        // --width: 568px;
+        // --width: 284px;
+        --width: 379px;
+        // --height: 243px;
+        // --height: 122px;
+        --height: 162px;
+        
         position: relative;
       }
 

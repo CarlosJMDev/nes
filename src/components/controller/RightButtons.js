@@ -1,5 +1,3 @@
-
-
 class RightButtons extends HTMLElement {
   constructor(){
     super();
@@ -9,6 +7,9 @@ class RightButtons extends HTMLElement {
   static get styles(){
     return /* css */`
       :host {
+        --button-background-size: 40px;
+        --button-width: 30px;
+        --font-size: 0.8rem;
       }
 
       .container {
@@ -20,20 +21,20 @@ class RightButtons extends HTMLElement {
         justify-items: center;
         justify-content: center;
         align-items: center;
-        margin-left: 10px;
+        margin-left: 5px;
       }
     
       .logo{
         font-family: "Pretendo";
         position: relative;
-        font-size: 1.25rem;
+        font-size: var(--font-size);
         color: var(--logo-color);
       }
 
       .logo-r{
         color: var(--logo-color);
         position: absolute;
-        font-size: .8rem;
+        font-size: var(--font-size);
       }
 
       .buttons-container{
@@ -41,13 +42,12 @@ class RightButtons extends HTMLElement {
         width: 100%;
         display: flex;
         justify-content: center;
-        column-gap: 10px;
+        column-gap: 5px;
       }
 
       .button-background{
-        margin-top: 10px;
-        width: 60px;
-        height: 60px;
+        width: var(--button-background-size);
+        height: var(--button-background-size);
         background-color: var(--background-color);
         display: flex;
         justify-content: center;
@@ -59,8 +59,8 @@ class RightButtons extends HTMLElement {
         border: 1px ridge black;
 
         .button{
-          width: 45px;
-          height: 45px;
+          width: var(--button-width);
+          height: var(--button-width);
           border-radius: 50%;
           background-color: var(--button-color);
           box-shadow:
@@ -71,13 +71,13 @@ class RightButtons extends HTMLElement {
         .button::before {
           content: "";
           display: block;
-          width: calc(45px * 0.8);
-          height: calc(45px* 0.8);
+          width: calc(var(--button-width) * 0.8);
+          height: calc(var(--button-width)* 0.8);
           border-top: 2px solid #fff7;
           border-radius: 50%;
           position: absolute;
-            top: 12px;
-            left: 12px;
+            top: 20%;
+            left: 20%;
           transform: rotate(-40deg);
         }
       }
@@ -85,10 +85,10 @@ class RightButtons extends HTMLElement {
       .a-button::after,
       .b-button::after{
         font-family: "Pretendo";
-        font-size: 1rem;
+        font-size: var(--font-size);
         position: absolute;
         color: var(--button-color);
-        transform: translateY(235%) translateX(180%);
+        transform: translateY(200%) translateX(140%);
       }
 
       .a-button::after{
@@ -117,7 +117,6 @@ class RightButtons extends HTMLElement {
         <div class="button-background a-button">
           <button class="button a-content"></button>
         </div>
-        
       </div>
     </section>
     `

@@ -1,5 +1,3 @@
-
-
 class LeftButtons extends HTMLElement {
   constructor(){
     super();
@@ -9,6 +7,7 @@ class LeftButtons extends HTMLElement {
   static get styles(){
     return /* css */`
       :host{
+        --button-size: 72px;
       }
 
       button {
@@ -26,9 +25,9 @@ class LeftButtons extends HTMLElement {
       }
 
       .buttons{
-        margin-top: 20px;
-        width: 108px;
-        height: 108px;
+        // margin-top: 10px;
+        width: var(--button-size);
+        height: var(--button-size);
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr 1fr 1fr;
@@ -48,7 +47,7 @@ class LeftButtons extends HTMLElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       .top-button{
@@ -101,6 +100,7 @@ class LeftButtons extends HTMLElement {
       .center-circle{
         width: 70%;
         height: 70%;
+        margin-inline-start: 3px;
         background-color: black;
         border-radius: 50%;
         border: 2px groove gray;
@@ -163,7 +163,6 @@ class LeftButtons extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    
   }
 
   render() {
